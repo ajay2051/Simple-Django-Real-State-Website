@@ -1,0 +1,11 @@
+{% extends 'realstate/base.html' %}
+{% block content %}
+    <a href="{% url 'listing_create' %}">Create New Listing</a>
+    {% for listing in listings %}
+     <a href="{% url 'listing_retrieve' listing.id %}" class="px-3 py-2"><h3>{{listing.title}}</h3> 
+        <span><a href="{% url 'listing_update' listing.id %}">Update</a></span>
+        <span><a href="{% url 'listing_delete' listing.id %}">Delete</a></span>
+     </a>  
+     
+    {% endfor %}
+{% endblock %}

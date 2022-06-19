@@ -1,0 +1,18 @@
+{% extends 'realstate/base.html' %}
+{% block content %}
+    
+    {{listing.title}}
+    <br>
+    ${{listing.price}}
+    <br>
+    {{listing.num_bedrooms}} Bedroom
+    <br>
+    {{listing.num_bathrooms}} Bathroom
+    <br>
+    {{listing.address}}
+    <br>
+    {{listing.area}} Sq Ft
+    <br>
+    <img src="{{ listing.image.url }}" alt="" srcset=""> 
+    
+{% endblock %}
